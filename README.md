@@ -6,7 +6,7 @@ Design pattern used: page object model\
 Methodology: behavior driven development
 
 To import project\
-git clone (put the link before clone from click on Code->copy link)
+-> git clone (put the link before clone from click on Code->copy link)
 
 📝 
 Commands in **cmd** file for **Behave** and **Selenium**\
@@ -35,4 +35,4 @@ b. If that doesn't work either:\
 Cautati 'selenium' -> Install Package\
 The same for the rest of the Libraries
 
-c. In the last instance, you create a new project, install what you need with pip and manually copy the necessary folders and files. 
+c. In the last instance, you create a new project, install what you need with pip and manually copy the necessary folders and files.

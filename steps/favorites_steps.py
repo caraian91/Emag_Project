@@ -1,23 +1,25 @@
 from behave import *
-from time import sleep
 
-
-@when('products: I add to favorites cart the laptop "{product_name}"')
+@when('favorite: I add to favorites cart the laptop "{product_name}"')
 def step_impl(context, product_name):
-    context.product_page.add_to_favorites_by_partial_product_name(product_name)
+    context.favorite_page.add_to_favorites_by_product_name(product_name)
 
-@when('products: I click Produse Favorite')
+@when('favorite: I click on Produse Favorite')
 def step_impl(context):
-    context.product_page.click_produse_favorite()
+    context.favorite_page.click_produse_favorite()
 
-@when('login: I check that i have reached the favorites page url')
+@when('favorite: I check that i have reached the favorites page url')
 def step_impl(context):
-    context.login_page.verify_favorites_url()
+    context.favorite_page.verify_favorites_url()
 
-@when('products: I click on the button Add to Basket from Favorites "{product_name}"')
+@when('favorite: I click on the button Add to Basket from Favorites "{product_name}"')
 def step_impl(context, product_name):
-    context.product_page.add_to_basket_by_partial_name_but_from_favorites_list(product_name)
+    context.favorite_page.add_to_basket_by_name_but_from_favorites_list(product_name)
 
-@then('products: I click on the delete buton from Favorites "{product_name}"')
+@when('favorite: I check the message on the basket to see that it has been added "{quantity}"')
+def step_impl(context, quantity):
+    context.favorite_page.check_product_in_cart(quantity)
+
+@then('favorite: I click on the delete buton from Favorites "{product_name}"')
 def step_impl(context, product_name):
-    context.product_page.delete_from_favorites_by_partial_product_name(product_name)
+    context.favorite_page.delete_from_favorites_by_product_name(product_name)

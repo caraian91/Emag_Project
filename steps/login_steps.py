@@ -6,9 +6,9 @@ def step_impl(context, email):
 
 @when('login: I set my password "{password}" and click Continua')
 def step_impl(context, password):
-    context.login_page.set_email(password)
-    context.login_page.click_continua_btn()
-    context.login_page.click_activeaza_mai_tarziu_btn()
+    context.login_page.set_password(password)
+    context.login_page.click_continue_btn()
+    context.login_page.click_activate_later_btn()
 
 @when('login: I click emag logo')
 def step_impl(context):

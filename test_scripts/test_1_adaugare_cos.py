@@ -28,15 +28,18 @@ sleep(2)
 # driver.find_element(By.XPATH, '//a[contains(text(), "Biscuiti")]/parent::div/parent::div/parent::div//button[text()="Adauga in Cos"]').click()
 driver.find_element(By.XPATH, '//a[contains(text(), "Biscuiti")]/parent::h2/parent::div/parent::div/parent::div//button[text()="Adauga in Cos"]').click()
 sleep(2)
-# asteptam sa se incarce vezi detalii cos - dureaza ceva pana apre popup
+
+# asteptam sa se incarce vezi detalii cos - dureaza ceva pana apare popup
 detalii_cos = WebDriverWait(driver, 1).until(EC.presence_of_element_located((By.XPATH, '//a[contains(text(), "Vezi detalii cos")]')))
 
 # click pe vezi detalii cos
 detalii_cos.click()
 sleep(2)
+
 # click pe continua
 driver.find_element(By.XPATH, '(//a[@href="/cart/checkout"])[1]').click()
 sleep(2)
+
 # verificam ca am ajuns pe pagina de login
 assert driver.current_url == 'https://auth.emag.ro/user/login'
 
