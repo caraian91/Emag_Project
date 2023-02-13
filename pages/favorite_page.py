@@ -15,7 +15,7 @@ class FavoritePage(BasePage):
 
     def click_produse_favorite(self):
         self.wait_and_click_elem_by_selector(*self.PRODUSE_FAVORITE_BTN)
-        sleep(5)
+        sleep(6)
 
     def add_to_basket_by_name_but_from_favorites_list(self, name):
         self.wait_and_click_elem_by_selector(By.XPATH, f'//span[contains(text(), "{name}")]/parent::a/parent::h2/parent::div/parent::div/parent::div//button[text()="Adauga in Cos"]')
@@ -25,3 +25,5 @@ class FavoritePage(BasePage):
 
     def verify_favorites_url(self):
         self.verify_page_url('https://www.emag.ro/favorites?ref=ua_favorites')
+
+

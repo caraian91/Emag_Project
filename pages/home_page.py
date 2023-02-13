@@ -7,7 +7,7 @@ from time import sleep
 class HomePage(BasePage):
     # Atributs
     ACCEPT_COOKIES_BTN = (By.XPATH, '//button[text()="Accept"]')
-    ENTER_YOUR_ACCOUNT_BTN = (By.XPATH, '(//a[text()="Intra in cont"])[2]')
+    ENTER_YOUR_ACCOUNT_BTN = (By.XPATH, '(//a[@id="my_account"]//i)[1]')
     HELLO_MSG = (By.XPATH, '//p/strong[contains(text(), "Salut")]')
     SEARCH_INPUT = (By.ID, 'searchboxTrigger')
     ENTER_YOUR_ACCOUNT_CLOSE_BTN = (By.XPATH, '(//i[@class="em em-close"])[3]')

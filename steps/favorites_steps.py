@@ -23,3 +23,4 @@ def step_impl(context, quantity):
 @then('favorite: I click on the delete buton from Favorites "{product_name}"')
 def step_impl(context, product_name):
     context.favorite_page.delete_from_favorites_by_product_name(product_name)
+
